@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Dork Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Google Dork Generator</h1>
+        <p class="subtitle">Generate search queries based on a target input.</p>
+
+        <form action="/generate" method="POST" class="form-card">
+            <label for="target">Target</label>
+            <input type="text" id="target" name="target" placeholder="example.com or a keyword" required>
+
+            <label for="targetType">Target Type</label>
+            <select id="targetType" name="targetType" required>
+                <option value="domain">Domain</option>
+                <option value="keyword">Keyword</option>
+                <option value="company">Company</option>
+            </select>
+
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option value="All">All</option>
+                {{range .Categories}}
+                <option value="{{.}}">{{.}}</option>
+                {{end}}
+            </select>
+
+            <button type="submit">Generate Dorks</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,388 @@
+[
+  {
+    "id": 1,
+    "name": "Site Search",
+    "category": "General",
+    "description": "Belirli bir domain içindeki sayfaları listeler.",
+    "template": "site:{target}",
+    "targetTypes": ["domain"]
+  },
+  {
+    "id": 2,
+    "name": "Exact Match",
+    "category": "General",
+    "description": "Tam eşleşen ifade araması yapar.",
+    "template": "\"{target}\"",
+    "targetTypes": ["keyword", "company"]
+  },
+  {
+    "id": 3,
+    "name": "Title Search",
+    "category": "General",
+    "description": "Başlıkta geçen sonuçları bulur.",
+    "template": "intitle:\"{target}\"",
+    "targetTypes": ["keyword", "company"]
+  },
+  {
+    "id": 4,
+    "name": "URL Search",
+    "category": "General",
+    "description": "URL içinde geçen sonuçları bulur.",
+    "template": "inurl:{target}",
+    "targetTypes": ["keyword", "domain"]
+  },
+  {
+    "id": 5,
+    "name": "Exclude Term",
+    "category": "General",
+    "description": "Belirli kelimeyi hariç tutar.",
+    "template": "\"{target}\" -jobs",
+    "targetTypes": ["keyword"]
+  },
+
+  {
+    "id": 6,
+    "name": "PDF Search",
+    "category": "Documents",
+    "description": "PDF belgeleri bulur.",
+    "template": "site:{target} filetype:pdf",
+    "targetTypes": ["domain", "keyword"]
+  },
+  {
+    "id": 7,
+    "name": "DOCX Search",
+    "category": "Documents",
+    "description": "Word belgelerini bulur.",
+    "template": "site:{target} filetype:docx",
+    "targetTypes": ["domain", "keyword"]
+  },
+  {
+    "id": 8,
+    "name": "XLSX Search",
+    "category": "Documents",
+    "description": "Excel belgelerini bulur.",
+    "template": "site:{target} filetype:xlsx",
+    "targetTypes": ["domain", "keyword"]
+  },
+  {
+    "id": 9,
+    "name": "PPTX Search",
+    "category": "Documents",
+    "description": "Sunum dosyalarını bulur.",
+    "template": "site:{target} filetype:pptx",
+    "targetTypes": ["domain", "keyword"]
+  },
+  {
+    "id": 10,
+    "name": "TXT Files",
+    "category": "Documents",
+    "description": "Metin dosyalarını arar.",
+    "template": "site:{target} filetype:txt",
+    "targetTypes": ["domain"]
+  },
+
+  {
+    "id": 11,
+    "name": "News Search",
+    "category": "Public Information",
+    "description": "Hedefle ilgili haberleri bulur.",
+    "template": "\"{target}\" news",
+    "targetTypes": ["keyword", "company"]
+  },
+  {
+    "id": 12,
+    "name": "Contact Pages",
+    "category": "Public Information",
+    "description": "İletişim sayfalarını bulur.",
+    "template": "\"{target}\" contact",
+    "targetTypes": ["keyword", "company"]
+  },
+  {
+    "id": 13,
+    "name": "About Pages",
+    "category": "Public Information",
+    "description": "Hakkında sayfalarını bulur.",
+    "template": "\"{target}\" about",
+    "targetTypes": ["keyword", "company"]
+  },
+  {
+    "id": 14,
+    "name": "Privacy Policy",
+    "category": "Public Information",
+    "description": "Gizlilik politikalarını bulur.",
+    "template": "site:{target} \"privacy policy\"",
+    "targetTypes": ["domain"]
+  },
+  {
+    "id": 15,
+    "name": "Terms of Service",
+    "category": "Public Information",
+    "description": "Kullanım şartlarını bulur.",
+    "template": "site:{target} \"terms of service\"",
+    "targetTypes": ["domain"]
+  },
+
+  {
+    "id": 16,
+    "name": "LinkedIn Profiles",
+    "category": "Platforms",
+    "description": "LinkedIn profillerini bulur.",
+    "template": "site:linkedin.com/in \"{target}\"",
+    "targetTypes": ["keyword", "company"]
+  },
+  {
+    "id": 17,
+    "name": "GitHub Search",
+    "category": "Platforms",
+    "description": "GitHub projelerini bulur.",
+    "template": "site:github.com \"{target}\"",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 18,
+    "name": "Twitter Search",
+    "category": "Platforms",
+    "description": "Twitter/X gönderilerini bulur.",
+    "template": "site:twitter.com \"{target}\"",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 19,
+    "name": "YouTube Search",
+    "category": "Platforms",
+    "description": "YouTube videolarını bulur.",
+    "template": "site:youtube.com \"{target}\"",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 20,
+    "name": "Reddit Search",
+    "category": "Platforms",
+    "description": "Reddit tartışmalarını bulur.",
+    "template": "site:reddit.com \"{target}\"",
+    "targetTypes": ["keyword"]
+  },
+
+  {
+    "id": 21,
+    "name": "Edu Sites",
+    "category": "Educational",
+    "description": ".edu sitelerinde arama yapar.",
+    "template": "site:.edu \"{target}\"",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 22,
+    "name": "Research Papers",
+    "category": "Educational",
+    "description": "Akademik makaleleri bulur.",
+    "template": "\"{target}\" filetype:pdf research",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 23,
+    "name": "Lecture Notes",
+    "category": "Educational",
+    "description": "Ders notlarını bulur.",
+    "template": "\"{target}\" filetype:pdf lecture",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 24,
+    "name": "Thesis Search",
+    "category": "Educational",
+    "description": "Tezleri bulur.",
+    "template": "\"{target}\" thesis filetype:pdf",
+    "targetTypes": ["keyword"]
+  },
+
+  {
+    "id": 25,
+    "name": "API Docs",
+    "category": "Technical",
+    "description": "API dökümantasyonlarını bulur.",
+    "template": "\"{target}\" api documentation",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 26,
+    "name": "Code Examples",
+    "category": "Technical",
+    "description": "Kod örneklerini bulur.",
+    "template": "\"{target}\" code example",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 27,
+    "name": "StackOverflow",
+    "category": "Technical",
+    "description": "StackOverflow sorularını bulur.",
+    "template": "site:stackoverflow.com \"{target}\"",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 28,
+    "name": "Bug Reports",
+    "category": "Technical",
+    "description": "Hata raporlarını bulur.",
+    "template": "\"{target}\" bug report",
+    "targetTypes": ["keyword"]
+  },
+
+  {
+    "id": 29,
+    "name": "Images",
+    "category": "Media",
+    "description": "Görselleri bulur.",
+    "template": "\"{target}\" images",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 30,
+    "name": "Videos",
+    "category": "Media",
+    "description": "Videoları bulur.",
+    "template": "\"{target}\" video",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 31,
+    "name": "Blog Posts",
+    "category": "Media",
+    "description": "Blog yazılarını bulur.",
+    "template": "\"{target}\" blog",
+    "targetTypes": ["keyword"]
+  },
+
+  {
+    "id": 32,
+    "name": "Email Mentions",
+    "category": "Contact",
+    "description": "Email geçen sayfaları bulur.",
+    "template": "\"{target}\" \"@\"",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 33,
+    "name": "Phone Numbers",
+    "category": "Contact",
+    "description": "Telefon numarası içeren sayfaları bulur.",
+    "template": "\"{target}\" phone",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 34,
+    "name": "Location Search",
+    "category": "Contact",
+    "description": "Adres bilgilerini bulur.",
+    "template": "\"{target}\" address",
+    "targetTypes": ["keyword"]
+  },
+
+  {
+    "id": 35,
+    "name": "Index Pages",
+    "category": "General",
+    "description": "Index sayfalarını bulur.",
+    "template": "site:{target} \"index of\"",
+    "targetTypes": ["domain"]
+  },
+  {
+    "id": 36,
+    "name": "Login Pages",
+    "category": "General",
+    "description": "Login sayfalarını bulur.",
+    "template": "site:{target} login",
+    "targetTypes": ["domain"]
+  },
+  {
+    "id": 37,
+    "name": "Admin Pages",
+    "category": "General",
+    "description": "Admin sayfalarını bulur.",
+    "template": "site:{target} admin",
+    "targetTypes": ["domain"]
+  },
+  {
+    "id": 38,
+    "name": "Search Pages",
+    "category": "General",
+    "description": "Arama sayfalarını bulur.",
+    "template": "site:{target} search",
+    "targetTypes": ["domain"]
+  },
+  {
+    "id": 39,
+    "name": "Forum Search",
+    "category": "General",
+    "description": "Forum içeriklerini bulur.",
+    "template": "\"{target}\" forum",
+    "targetTypes": ["keyword"]
+  },
+  {
+    "id": 40,
+    "name": "FAQ Pages",
+    "category": "General",
+    "description": "SSS sayfalarını bulur.",
+    "template": "site:{target} faq",
+    "targetTypes": ["domain"]
+  },
+  {
+  "id": 41,
+  "name": "Medium Articles",
+  "category": "Platforms",
+  "description": "Medium platformunda hedefle ilgili yazıları bulur.",
+  "template": "site:medium.com \"{target}\"",
+  "targetTypes": ["keyword"]
+  },
+  {
+  "id": 42,
+  "name": "X Search",
+  "category": "Platforms",
+  "description": "X üzerindeki hedefle ilgili paylaşımları bulur.",
+  "template": "site:x.com \"{target}\"",
+  "targetTypes": ["keyword"]
+  },
+  {
+  "id": 43,
+  "name": "Educational Directory Listings",
+  "category": "Educational",
+  "description": "Eğitim sitelerinde açık dizin sayfalarını arar.",
+  "template": "site:.edu intitle:\"index of\" \"{target}\"",
+  "targetTypes": ["keyword"]
+ },
+ {
+  "id": 44,
+  "name": "Open SQL Admin Files",
+  "category": "Sensitive Files",
+  "description": "Açık bırakılmış SQL ve admin dosyalarını bulur.",
+  "template": "site:{target} intitle:\"index of\" \"sql\" \"admin\"",
+  "targetTypes": ["domain"]
+ },
+ {
+  "id": 45,
+  "name": "Leaked Credentials Files",
+  "category": "Sensitive Files",
+  "description": "Credential sızıntısı içeren dosyaları bulur.",
+  "template": "site:{target} (filetype:xlsx OR filetype:csv) \"password\" OR \"username\" OR \"login\"",
+  "targetTypes": ["domain"]
+ },
+ {
+    "id": 46,
+    "name": "Robots.txt",
+    "category": "Information Gathering",
+    "description": "robots.txt dosyasını bulur.",
+    "template": "site:{target} inurl:robots.txt",
+    "targetTypes": ["domain"]
+ },
+ {
+  "id": 47,
+  "name": "Uploads with Files",
+  "category": "Exposed Directories",
+  "description": "Uploads klasöründe dosya listesi olan dizinleri bulur.",
+  "template": "site:{target} intitle:\"index of\" inurl:uploads",
+  "targetTypes": ["domain"]
+}
+
+ 
+]

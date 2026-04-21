@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Generated Dorks</h1>
+
+        <div class="summary-box">
+            <p><strong>Target:</strong> {{.Target}}</p>
+            <p><strong>Target Type:</strong> {{.TargetType}}</p>
+            <p><strong>Category:</strong> {{if .Category}}{{.Category}}{{else}}All{{end}}</p>
+            <p><strong>Total Results:</strong> {{.ResultCount}}</p>
+        </div>
+
+        <div class="top-actions">
+            <a href="/" class="back-button">Back</a>
+        </div>
+
+        {{if .Results}}
+        <div class="results-grid">
+            {{range .Results}}
+            <div class="result-card">
+                <h2>{{.Name}}</h2>
+                <p><strong>Category:</strong> {{.Category}}</p>
+                <p>{{.Description}}</p>
+
+                <div class="query-box">{{.Query}}</div>
+
+                <div class="button-row">
+                    <button class="copy-btn" data-query="{{.Query}}">Copy</button>
+                    <button class="google-btn" data-query="{{.Query}}">Open in Google</button>
+                </div>
+            </div>
+            {{end}}
+        </div>
+        {{else}}
+            <div class="result-card">
+                <h2>No results found</h2>
+                <p>Try a different target type or category.</p>
+            </div>
+        {{end}}
+    </div>
+</body>
+</html>
